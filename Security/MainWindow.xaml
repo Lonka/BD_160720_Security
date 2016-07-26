@@ -1,0 +1,50 @@
+﻿<Window x:Class="Security.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="918">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="398*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="72*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Encrypt" HorizontalAlignment="Left" Margin="202,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="Button_Click" Height="22"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left"  Height="23" Margin="3,10,0,0" TextWrapping="Wrap" Text="Abc123$%^" VerticalAlignment="Top" Width="194" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,13,0,0" TextWrapping="Wrap" Text="Password：" VerticalAlignment="Top" Height="16" Width="108"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Text="MD5：" Height="16" Width="108"/>
+        <TextBlock x:Name="txtbMD5" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Text="MD5 Result" Height="16" Width="786"></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="305,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Text="Salt：" Height="16" Width="33"></TextBlock>
+        <TextBlock x:Name="txtbSalt" HorizontalAlignment="Left" Margin="338,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Text="SaltValue" Height="16" Width="53"></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Text="MD5+Salt：" Width="108" Height="16"/>
+        <TextBlock x:Name="txtbMD5Salt" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Text="MD5 + Salt Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Text="SHA1：" Height="16" Width="108"/>
+        <TextBlock x:Name="txtbSHA1" HorizontalAlignment="Left" Margin="10,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Text="SHA1 Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Text="SHA1+Salt：" Width="108" Height="16"/>
+        <TextBlock x:Name="txtbSHA1Salt" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Text="SHA1 + Salt Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Text="SHA256：" Height="16" Width="108"/>
+        <TextBlock x:Name="txtbSHA256" HorizontalAlignment="Left" Margin="10,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" Text="SHA256 Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Text="SHA256+Salt：" Width="108" Height="16"/>
+        <TextBlock x:Name="txtbSHA256Salt" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" Text="SHA256 + Salt Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Text="SHA384：" Height="16" Width="108"/>
+        <TextBlock x:Name="txtbSHA384" HorizontalAlignment="Left" Margin="10,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Grid.Column="1" Text="SHA384 Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Text="SHA384+Salt：" Width="108" Height="16"/>
+        <TextBlock x:Name="txtbSHA384Salt" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="4" Grid.Column="1" Text="SHA384 + Salt Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Text="SHA512：" Height="16" Width="108"/>
+        <TextBlock x:Name="txtbSHA512" HorizontalAlignment="Left" Margin="10,1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Grid.Column="1" Text="SHA512 Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Text="SHA512+Salt：" Width="108" Height="16"/>
+        <TextBlock x:Name="txtbSHA512Salt" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="5" Grid.Column="1" Text="SHA512 + Salt Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="6" Text="BCrypt：" Height="16" Width="108"/>
+        <TextBlock x:Name="txtbBcrypt" HorizontalAlignment="Left" Margin="10,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="6" Grid.Column="1" Text="BCrypt Result" Height="16" Width="786"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Right" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="6" Text="BCrypt+Salt：" Width="108" Height="16"/>
+        <TextBlock x:Name="txtbBcryptSalt" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="6" Grid.Column="1" Text="BCrypt + Salt Result" Height="16" Width="786"/>
+
+    </Grid>
+</Window>
